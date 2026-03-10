@@ -56,8 +56,44 @@ claude
 | [Claude Code](https://claude.ai/code) | Yes | CLI for Claude |
 | [Day Planner](https://github.com/ivan-lednev/obsidian-day-planner) plugin | Recommended | Time-blocking in daily notes |
 | [Obsidian CLI](https://github.com/Obsidian-TTRPG-Community/obsidian-cli) | Recommended | Skills fall back to file tools if unavailable |
+| [ffmpeg](https://ffmpeg.org/) | Optional | For `/meeting` auto-transcription (`brew install ffmpeg`) |
 | Gmail MCP | Optional | For email integration in `/daily-init` |
 | [Templater](https://github.com/SilentVoid13/Templater) plugin | Optional | For daily note templates |
+
+## Configuration
+
+After installing, edit the **Customization** table in [CLAUDE.md](CLAUDE.md) to match your setup (vault owner name, calendar names, file paths).
+
+### Secrets (`~/.secrets`)
+
+Some skills need API keys. Create a `~/.secrets` file:
+
+```bash
+# Required for /meeting auto-transcription (Mode 1)
+export GEMINI_API_KEY="your-key-here"    # https://aistudio.google.com/apikey
+```
+
+Then copy the transcription script:
+
+```bash
+cp skills/meeting/scripts/gemini-transcribe.sh ~/bin/
+chmod +x ~/bin/gemini-transcribe.sh
+```
+
+If you skip this, `/meeting` still works — just pass it a transcript file or paste text directly (Modes 2 & 3).
+
+### Gmail MCP (optional)
+
+`/daily-init` can pull today's emails into your briefing via Claude Code's built-in Gmail MCP. To enable:
+
+1. Open Claude Code settings and connect your Google account under MCP integrations
+2. Grant Gmail read access when prompted
+
+If not configured, `/daily-init` skips the email section silently.
+
+### Apple Calendar & Reminders (macOS only)
+
+`/deadline-plan` and `/quarterly-plan` can create calendar events and reminders via AppleScript. No setup needed beyond macOS — configure the calendar and reminders list names in [CLAUDE.md](CLAUDE.md).
 
 ## Vault Structure
 
