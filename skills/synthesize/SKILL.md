@@ -1,6 +1,6 @@
 ---
 name: synthesize
-description: Take the notes or content I specify and distill them into a structured knowledge note.
+description: "TRIGGER when the user wants to distill, synthesize, or consolidate notes into a structured knowledge note. Use for: turning rough thinking notes into polished concept notes, processing brainstorm outputs (ChatGPT, cofounder, VC conversations) into structured takeaways, converting course material into revision-ready notes. Signal phrases: 'synthesize these notes', 'distill this into a knowledge note', 'turn this brainstorm into something structured', 'create a concept note from', 'process these ideas'. Also triggers for /synthesize. NOT for project syncing (use /project-sync), meeting transcript processing (use /meeting), or decision analysis (use /decision)."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT
@@ -113,7 +113,7 @@ Write in English by default. If the source material is predominantly in Chinese 
 Save the note to `04_Knowledge/[subfolder]/[descriptive filename].md`. **Always use a subfolder — never save directly to `04_Knowledge/` root.**
 
 Choose the subfolder by matching the content to an existing folder or creating a new one:
-- **Project match** — if the content belongs to a known project, use that folder (e.g. `04_Knowledge/ProjectAlpha/`, `04_Knowledge/ProjectBeta/`)
+- **Project match (highest priority)** — if the frontmatter `project:` field is set, **always** use the project folder (e.g. `04_Knowledge/ProjectAlpha/`). This ensures `/project-sync` can find the note.
 - **Domain/topic match** — if no project applies, use or create a thematic folder (e.g. `04_Knowledge/Hardware/`, `04_Knowledge/AI/`, `04_Knowledge/Finance/`)
 - **If in doubt**, infer from the source file's location, filename, or content tags
 

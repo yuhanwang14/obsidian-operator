@@ -1,6 +1,6 @@
 ---
 name: meeting-prep
-description: "Generate a meeting agenda from project context. Reads project note, recent meeting knowledge, blockers, weekly progress, and deadlines to produce a structured prep document."
+description: "Use BEFORE any upcoming meeting, call, sync, 1:1, presentation, review, or scheduled conversation. Trigger whenever the user mentions preparing for, prepping for, or getting ready for a future discussion — or asks for talking points, a discussion checklist, things to bring up, or a prep doc. Also trigger when the user mentions a future meeting with a person or team alongside a project name. Reads Obsidian project notes, blockers, weekly progress, and recent decisions to generate an actionable checklist. NOT for post-meeting summaries, transcripts, or meeting minutes."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: project-sync
-description: Sync all knowledge notes and weekly reviews for a project back into its main project note.
+description: "TRIGGER when: user says /project-sync, or wants to sync, refresh, rebuild, update, or consolidate an existing project's note. Signal phrases: 'sync ProjectX', 'refresh the project overview', 'rebuild the knowledge base section', 'consolidate meeting notes into the project note', 'update strategic signals', 'project note hasn't been synced'. The user names a project and wants its overview note regenerated from scattered knowledge notes, meeting notes, decisions, brainstorms, and weekly reviews. DO NOT trigger for: creating new projects, comparing projects, archiving projects, adding individual knowledge notes, meeting prep, or morning briefings."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

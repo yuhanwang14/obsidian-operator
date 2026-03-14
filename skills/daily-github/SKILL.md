@@ -1,6 +1,6 @@
 ---
 name: daily-github
-description: Fetch today's trending GitHub repos and produce a knowledge note with contextual introductions, plus a short summary in the daily note.
+description: "Use when the user asks for GitHub trending repositories, top open source projects, or invokes /daily-github. Covers requests to fetch, browse, or summarize what's popular or trending on GitHub — optionally filtered by programming language (python, rust, typescript, etc.) and time window (daily, weekly, monthly). Produces a detailed knowledge note with contextual introductions for each repo and appends a short summary to the Obsidian daily note. Also triggers for requests mentioning the GitHub trending page, writing up trending repo reports, or asking about top/hot/popular repos this week or month."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

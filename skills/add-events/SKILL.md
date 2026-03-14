@@ -1,3 +1,10 @@
+---
+name: add-events
+description: "Batch-add events to Apple Calendar and Reminders with automatic routing into the Obsidian execution layer. TRIGGER when the user wants to add events, meetings, or appointments to their calendar — whether from pasted text, bullet lists, or described events. Signal phrases: 'add these events', 'put this on my calendar', 'schedule these meetings', 'add events for project X', 'create calendar events from this list'. Also triggers for /add-events. Creates Apple Calendar events, Apple Reminders for deadlines, writes Upcoming Events file, and routes current-week events to Blockers.md. NOT for viewing calendar, daily briefing, meeting prep, or deadline planning."
+version: 1.0.0
+author: Yuhan Wang
+---
+
 Batch-add events to Apple Calendar ("Operator") and associated deadlines to Apple Reminders, with automatic routing into the Operator execution layer.
 
 **CLI fallback:** If any `obsidian` CLI command fails, silently use the equivalent file tool (Read, Write, Edit). Do not surface CLI errors to the user.

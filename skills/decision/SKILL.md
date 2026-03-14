@@ -1,6 +1,6 @@
 ---
 name: decision
-description: Stress-test the decision described in my arguments.
+description: "TRIGGER when the user wants to stress-test, challenge, analyze, or evaluate a decision — whether described directly, referenced as a file, or pasted as a proposal. Signal phrases: 'stress-test this decision', 'challenge this proposal', 'should we pivot', 'is this the right call', 'what are the risks of choosing X', 'analyze the tradeoffs', 'decision analysis'. Also triggers for /decision. Produces a structured decision challenge note with assumptions, risks, alternatives, and recommendation. NOT for making decisions on the user's behalf, brainstorming new ideas, general project status, or meeting prep."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

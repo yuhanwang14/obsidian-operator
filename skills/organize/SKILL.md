@@ -1,6 +1,6 @@
 ---
 name: organize
-description: Scan the vault for recently modified or newly created files.
+description: "Scan the Obsidian vault for misplaced files, missing frontmatter, and notes that should be split or merged. TRIGGER when the user wants to tidy, organize, audit, or clean up the vault structure. Signal phrases: 'organize my vault', 'check for misplaced files', 'audit vault structure', 'tidy up notes', 'what's out of place'. Also triggers for /organize. Produces recommendations only — does not move or edit files. NOT for file management outside the vault, desktop cleanup, or code organization."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

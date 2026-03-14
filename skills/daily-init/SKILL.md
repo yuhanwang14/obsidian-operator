@@ -1,6 +1,6 @@
 ---
 name: daily-init
-description: Generate today's daily briefing by gathering data from all sources below, then output a single concise briefing.
+description: "Daily kickoff ritual — invoke for /daily-init, \"start my day\", \"morning briefing\", \"set up today's note\", or any request to begin, initialize, or plan the workday. Builds today's daily note by pulling Gmail, calendar, weekly todos, yesterday's carry-forwards, and active deadline plans into a structured briefing with action items and a time-blocked schedule. Optional args: hours budget, manual items (e.g. \"/daily-init 6, buy groceries\"). Auto-triggers week/month/quarter boundary reviews when needed."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT
@@ -192,8 +192,9 @@ Write the briefing directly into the `## Briefing` section of today's daily note
 - Same task in different languages (e.g. "课程作业" and "Course assignment")
 - Same task with different prefixes (e.g. "carried: Research UK micro-VC list" and Weekly Todo "Research UK micro-VC list")
 - Same task at different granularity (e.g. "Scope NLP assignment" and "NLP assignment — report + submit")
+- Same task described as different steps of the same goal (e.g. "call dentist" and "Schedule dentist appointment" — calling IS the act of scheduling; "review pitch deck" and "finalize pitch deck" — both refer to working on the deck). When a manual item is a concrete action that fulfills a vaguer Weekly Todo item, merge them and keep the manual version (it's the user's stated intent for today).
 
-When merging duplicates, keep the **most specific/updated version** (usually the carried item, since it has the latest context). Apply the most relevant prefix. Never list the same task twice.
+When merging duplicates, keep the **most specific/updated version** — manual items take priority over Weekly Todo items (the user explicitly asked for them), carried items over planned items (they have fresher context). Apply the most relevant prefix. Never list the same task twice.
 
 **Daily scoping for deadline items:** Deadline-tagged items from Weekly Todo should be replaced with the next queue task + hours remaining this week (computed in Step 3d). Example: `[Project/Subject] Lecture notes first pass — 3.0h left this week`.
 

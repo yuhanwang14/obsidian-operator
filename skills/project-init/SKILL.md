@@ -1,6 +1,6 @@
 ---
 name: project-init
-description: Initialize a new project with standard folder structure and project note.
+description: "TRIGGER: /project-init, 'new project', 'scaffold project', 'initialize project', 'set up project', 'start tracking project', 'kick off initiative', 'set it up in my vault'. Use to create folder structure and project note for a brand-new project or initiative of any type (code, research, design, academic, startup, side project). This is a direct scaffolding action — not brainstorming, not planning. Key signal: user names something that doesn't exist yet and wants it set up as a trackable project. NOT for existing projects, syncing, proposals, knowledge notes, file organization, or daily tasks."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

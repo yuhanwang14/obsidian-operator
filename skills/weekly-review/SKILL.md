@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Produce a structured weekly review note for the week just completed.
+description: "Invoke IMMEDIATELY when the user asks to review their week, generate a weekly review or weekly synthesis, check weekly progress, score intentions, or detect stalled/horizon items. Responds to /weekly-review. Triggers on: 'review the week', 'weekly review', 'weekly synthesis', 'how did this week go', 'generate weekly review for W##', 'do my weekly review', 'score my intentions', 'flag horizon items', 'what stalled this week'. Produces an Obsidian weekly review note with AI synthesis covering progress, stalled items, intention scorecards, horizon-item detection, and next-week focus; leaves reflection blank for user. Not for weekly planning/init, project-specific status checks, meeting transcript processing, or standalone next-week planning."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: weekly-init
-description: "Initialize the current week: create the week folder, carry unfinished items from last week, and populate the Weekly Todo."
+description: "Invoke IMMEDIATELY when user wants to start a new week or says /weekly-init. Triggers on any request to set up, initialize, or kick off a week — including Monday morning setup, weekly planning, creating W## folders, building a weekly todo or blockers file, carrying over unfinished items, or pulling in deadline tasks. If the user mentions 'new week', 'start the week', 'get organized for this week', 'execution layer', or wants to carry forward from last week, this is the skill. Not for: weekly review/retrospective, daily briefing, calendar lookup, deadline plan creation, or progress tracking."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT
@@ -74,8 +74,9 @@ Initialize the current week: create the week folder, carry unfinished items from
    - **Distinguish event from prep task:**
      - If the item describes the event itself (e.g. `NLV call (Mar 4)`) → create a Blockers `## Meetings` entry.
      - If the item describes prep for the event (e.g. `NLV call prep — narrative, demo script (call is Wed Mar 4)`) → extract the event from the parenthetical, create a Blockers `## Meetings` entry for the event, keep the prep task in Weekly Todo as-is.
-   - **Entry format:** `- [ ] **Day Mon DD** — Event name — [[Weekly Review · YYYY-WXX]]`
-     - e.g. `- [ ] **Wed Mar 4** — NLV Zoom call — [[Weekly Review · 2026-W09]]`
+   - **Entry format:** `- [ ] **Day Mon DD** — Event name — [ProjectName] [[Weekly Review · YYYY-WXX]]`
+     - e.g. `- [ ] **Wed Mar 4** — NLV Zoom call — [FM-Copilot] [[Weekly Review · 2026-W09]]`
+     - Infer the project name from context (the event name, the weekly review source, or the project the meeting relates to). If no project can be inferred, use `[General]`.
      - If a time is mentioned in the source text, include it: `**Wed Mar 4, 3:30 PM**`
      - If participants are mentioned, include them as a sub-bullet.
 

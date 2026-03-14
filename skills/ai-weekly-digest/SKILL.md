@@ -1,6 +1,6 @@
 ---
 name: ai-weekly-digest
-description: "Curated weekly AI landscape digest: top papers, big tech moves, startup funding, open-source releases, and policy developments."
+description: "Generate a curated weekly AI landscape digest covering top papers, big tech announcements, early-stage startup funding, open-source releases, and strategic context. TRIGGER when the user asks for an AI digest, AI weekly roundup, what happened in AI this week, or wants to catch up on AI news and research. Also triggers for /ai-weekly-digest. Pulls from RSS feeds, web search, and vault GitHub trending data. NOT for general news, non-AI topics, daily briefings, or project-specific research."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: quarterly-plan
-description: "Strategic quarterly planning: init, review, and monthly pulse checkpoint."
+description: "Use when the user wants to check on quarterly goals, assess objective status (on track/at risk/off track), initialize a new quarter's plan, review a completed quarter's results, or run a monthly pulse checkpoint. Triggers for: tracking quarterly goal progress, mid-quarter checkpoints, quarter-end retrospectives with objective-by-objective analysis, setting up a new quarter (e.g. 'set up Q2'), monthly pulse reports showing how goals are progressing, and horizon item tracking. Also handles the /quarterly-plan slash command with subcommands like init, review, and pulse. Do NOT use for annual vision/review, weekly planning, general strategy summaries, or meeting prep."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT
@@ -26,7 +26,7 @@ If no argument given, auto-detect mode:
 Compute current quarter string `YYYY-QX`. Determine which month within the quarter (1st, 2nd, or 3rd). Default month = last month if not specified.
 
 ### Step 2: Read sources
-- All Weekly Reviews from the target month in `01_Execution/YYYY-WXX/Weekly Review.md` — especially `## Horizon Items` and `## Reflection` sections (surface reflection themes in qualitative assessment)
+- All Weekly Reviews from the target month in `01_Execution/YYYY-WXX/Weekly Review.md` — especially `### Horizon Items` (under `## AI Synthesis`) and `## Reflection` sections (surface reflection themes in qualitative assessment)
 - Current `00_Strategy/YYYY-QX/Quarterly Plan.md` — the goals being tracked
 - Active project notes in `02_Projects/` (status: active) — recent progress, `## Now`, `## Risks`, and `## Strategic Signals` sections
 - Knowledge notes created during the target month in `04_Knowledge/` — meetings, decisions, research, brainstorms

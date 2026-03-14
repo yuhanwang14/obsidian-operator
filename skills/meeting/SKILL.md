@@ -1,6 +1,6 @@
 ---
 name: meeting
-description: "Store a meeting transcript and produce a knowledge note. Supports three modes: auto-transcribe, chunked transcript processing, and direct transcript."
+description: "Invoke IMMEDIATELY when user shares meeting output: pasted transcripts, dialogue text, .m4a recordings, transcript files, or says a call/sync just ended and wants processing. Responds to /meeting. Produces Obsidian knowledge notes with decisions, actions, and open questions; routes items to weekly todo and blockers. Supports three modes: auto-transcribe (.m4a), chunked transcript directory, and direct/pasted transcript. Not for scheduling, meeting prep, live note-taking, or past meeting recall."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

@@ -1,6 +1,6 @@
 ---
 name: annual-vision
-description: Annual vision setting and year-end retrospective.
+description: "Use when the user wants to set their annual vision, define yearly goals, or conduct a year-end retrospective. Triggers for: creating or updating a yearly vision document (north star, annual goals, key bets, themes, quarterly targets), reviewing how a full year went against the original vision, setting strategic direction for an upcoming year, or defining what success looks like for a specific year. Also triggers for the /annual-vision command. Does NOT apply to quarterly reviews, monthly pulses, weekly planning, project-specific context lookups, or multi-year career/strategic plans."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT

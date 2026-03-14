@@ -2,7 +2,7 @@
 
 An AI-native personal operating system built on Obsidian + Claude Code.
 
-Operator is an opinionated system of 15 Claude Code skills that turn an Obsidian vault into a structured execution engine — daily briefings, weekly reviews, strategic planning, meeting processing, deadline tracking, and knowledge synthesis, all orchestrated by AI agents.
+Operator is an opinionated system of 16 Claude Code skills that turn an Obsidian vault into a structured execution engine — daily briefings, weekly reviews, strategic planning, meeting processing, deadline tracking, and knowledge synthesis, all orchestrated by AI agents.
 
 ## Quick Start
 
@@ -29,10 +29,10 @@ npx skills add yuhanwang14/obsidian-operator@meeting
 npx skills add yuhanwang14/obsidian-operator@project-init
 # ... etc
 
-# Or install all 15
+# Or install all 16
 for skill in daily-init weekly-init weekly-review daily-github ai-weekly-digest \
   meeting meeting-prep project-init project-sync quarterly-plan annual-vision \
-  deadline-plan decision synthesize organize; do
+  deadline-plan decision synthesize organize add-events; do
   npx skills add yuhanwang14/obsidian-operator@$skill
 done
 ```
