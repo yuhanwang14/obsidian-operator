@@ -11,10 +11,7 @@
   "plugins": [
     {
       "name": "obsidian-operator",
-      "source": {
-        "source": "github",
-        "repo": "yuhanwang14/obsidian-operator"
-      },
+      "source": "..",
       "description": "All 17 Operator skills — daily ops, weekly planning, strategic reviews, meetings, projects, knowledge synthesis, and vault maintenance.",
       "version": "1.0.0"
     }
