@@ -43,6 +43,26 @@ if arg1 is raw text           → Mode 3 (pasted transcript)
 
 ---
 
+## Pre-flight check — Speaker information
+
+Before processing any transcript (all modes), verify that the user has provided **speaker information** — at minimum the name of each participant.
+
+1. If the transcript uses generic labels (`Speaker 1`, `Speaker 2`, `S1/S2`, `Person A`, etc.) and the user has **not** supplied a mapping, **pause and ask**:
+
+   > The transcript uses generic speaker labels. To produce accurate notes, I need real names for each speaker. Please provide a mapping, e.g.:
+   >
+   > - Speaker 1 → Jason
+   > - Speaker 2 → Yuhan
+   >
+   > (At minimum, tell me who was in the meeting.)
+
+2. If the user provides names, apply the mapping to speaker labels throughout the transcript before continuing.
+3. If speaker names are already present in the transcript (e.g. `Jason:`, `Yuhan:`) or the user provided them in the invocation, skip this check and proceed.
+
+Do **not** guess or infer speaker identities from transcript content alone — always confirm with the user.
+
+---
+
 ## Mode 1 — Auto-transcribe (`/meeting <m4a_path> <name> [project]`)
 
 Detects that the first argument is an `.m4a` file.
