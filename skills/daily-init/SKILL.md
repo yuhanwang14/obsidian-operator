@@ -119,7 +119,10 @@ Read the most recently modified files in `01_Execution/` and any active projects
 ### 2. This week's daily notes
 Read all daily note files in `01_Execution/YYYY-[W]WW/` (excluding `Weekly Review.md` and `Weekly Todo.md`).
    - From **yesterday's note**: extract:
-     - Any action item marked `[>]` (carry forward, prefixed with "carried:")
+     - Any action item marked `[>]` — check for an explicit delay date (text like "→ YYYY-MM-DD", "→ Mon", "delay to Mar 30", etc.):
+       - **Delay date = today** → promote to a normal action item, prefixed "carried:" (the delay has landed)
+       - **Delay date is in the future** → carry forward as `[>]` with the date preserved, prefixed "deferred:" (not yet actionable — passes through today's note visibly but stays `[>]`)
+       - **No delay date** → treat as a regular carry-forward, prefixed "carried:" (same as before)
      - The `## Plan > ### Tomorrow` block — each bullet becomes a planned item
    - From **all this week's notes** (including yesterday): collect all `## Plan > ### This week` items:
      - Items with a (Day) prefix like (Mon), (Tue), etc. → surface only on that designated day
@@ -176,9 +179,10 @@ Glob for all `02_Projects/**/Deadline Plan.md` files (recursive — catches nest
 
 ## Action Item States
 
-Action items use two checkbox states:
+Action items use three checkbox states:
 - `[x]` — **Completed today**
 - `[>]` — **Move to tomorrow** (will be auto-carried forward in next day's briefing)
+- `[>]` with a date suffix — **Delayed to a specific date** (e.g. `- [>] Draft proposal → 2026-03-30`). Carried forward daily as `[>]` until that date arrives, then promoted to a regular `[ ]` item.
 
 ## Output Format
 
@@ -200,7 +204,8 @@ When merging duplicates, keep the **most specific/updated version** — manual i
 
 After deduplication and daily scoping, list items in this order:
 - Weekly Todo `[ ]` items — standing weekly commitments (no prefix, always shown until done). Deadline items use today's scoped version.
-- "carried:" items — Yesterday's [>] items (only if not already covered by a Weekly Todo item above)
+- "carried:" items — Yesterday's [>] items whose delay date is today or had no delay date (only if not already covered by a Weekly Todo item above)
+- "deferred:" items — Yesterday's [>] items with a future delay date. Written as `- [>] deferred: <task> → YYYY-MM-DD`. These stay `[>]` (not `[ ]`) so they pass through without cluttering the actionable list. They will be carried forward again tomorrow until the date arrives.
 - "planned:" items — From this week's ### This week and ### Tomorrow
 - "manual:" items — From command arguments
 - New tasks extracted from email, calendar, and vault (checklist format)
