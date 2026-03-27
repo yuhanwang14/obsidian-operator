@@ -251,3 +251,16 @@ Rules:
 After the briefing is written, open the daily note in Obsidian: `obsidian open path="<daily-note-path>"` (using the path resolved from `obsidian daily:path`).
 
 Then automatically run `/daily-github` to fetch today's trending repos and append the summary to the daily note. Pass no arguments (defaults: all languages, daily, 10 repos).
+
+## Post-Briefing: Content Extract
+
+After `/daily-github` has run, scan yesterday's notes for publishable content ideas:
+
+1. Read yesterday's daily note, plus any knowledge notes (`04_Knowledge/`), thinking notes (`03_Thinking/`), AI digests, and GitHub trending reports created yesterday.
+2. For each note, evaluate: does it contain a non-obvious insight that maps to a content pillar (founder narrative, AI observer, builder workflow, personal reflection)?
+3. Append 0-3 content suggestions to `06_Content/Backlog.md` under `## Queue`, using the format:
+   `- [ ] **<pillar>** · <one-line hook> · [[source note]] · \`from:<origin>\``
+4. Deduplicate: skip any suggestion whose `[[source note]]` already appears in the backlog.
+5. If suggestions were added, append to today's `### Flags`:
+   `- **Content:** N new ideas added to backlog (pillar1, pillar2)`
+   If nothing was found, output nothing.
