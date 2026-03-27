@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Obsidian Operator — an AI-native personal operating system built on Obsidian + Claude Code",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "obsidian-operator",
       "source": "./",
-      "description": "All 17 Operator skills — daily ops, weekly planning, strategic reviews, meetings, projects, knowledge synthesis, and vault maintenance.",
-      "version": "1.0.0"
+      "description": "All 19 Operator skills — daily ops, weekly planning, strategic reviews, meetings, projects, knowledge synthesis, vault maintenance, and content engine.",
+      "version": "1.1.0"
     }
   ]
 }
