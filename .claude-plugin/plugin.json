@@ -1,7 +1,7 @@
 {
   "name": "obsidian-operator",
   "version": "1.2.0",
-  "description": "AI-native personal operating system for Obsidian — 19 skills for daily briefings, weekly reviews, strategic planning, meeting processing, deadline tracking, knowledge synthesis, and vault maintenance.",
+  "description": "AI-native personal operating system for Obsidian — 19 skills for daily briefings, weekly reviews, strategic planning, meeting processing, deadline tracking, knowledge synthesis, vault maintenance, and content engine with newsletter scanning.",
   "author": {
     "name": "Yuhan Wang",
     "url": "https://github.com/yuhanwang14"
