@@ -256,7 +256,7 @@ Then automatically run `/daily-github` to fetch today's trending repos and appen
 
 After `/daily-github` has run, scan yesterday's notes for publishable content ideas:
 
-1. Read yesterday's daily note, plus any knowledge notes (`04_Knowledge/`), thinking notes (`03_Thinking/`), AI digests, and GitHub trending reports created yesterday.
+1. Read yesterday's daily note, plus any knowledge notes (`04_Knowledge/`), thinking notes (`03_Thinking/`), AI digests, GitHub trending reports, and Substack newsletter emails received yesterday.
 2. For each note, evaluate: does it contain a non-obvious insight that maps to a content pillar (founder narrative, AI observer, builder workflow, personal reflection)?
 3. Append 0-3 content suggestions to `06_Content/Backlog.md` under `## Queue`, using the format:
    `- [ ] **<pillar>** · <one-line hook> · [[source note]] · \`from:<origin>\``

@@ -1,6 +1,6 @@
 ---
 name: content-extract
-description: "Scan yesterday's vault notes for publishable content ideas and append them to the content backlog. TRIGGER when the user wants to find content ideas, mine notes for posts, scan for publishable insights, extract content from their vault, or asks 'what should I write about'. Also triggers for /content-extract. Runs automatically as part of /daily-init post-briefing. Evaluates daily notes, knowledge notes, meeting syntheses, decisions, AI digests, and thinking notes against four content pillars (founder narrative, AI observer, builder workflow, personal reflection). NOT for drafting content (use /content-draft), not for organizing the vault (use /organize), not for synthesizing notes into knowledge (use /synthesize)."
+description: "Scan yesterday's vault notes and newsletter emails for publishable content ideas and append them to the content backlog. TRIGGER when the user wants to find content ideas, mine notes for posts, scan for publishable insights, extract content from their vault, or asks 'what should I write about'. Also triggers for /content-extract. Runs automatically as part of /daily-init post-briefing. Evaluates daily notes, knowledge notes, meeting syntheses, decisions, AI digests, thinking notes, and Substack newsletter emails against four content pillars (founder narrative, AI observer, builder workflow, personal reflection). NOT for drafting content (use /content-draft), not for organizing the vault (use /organize), not for synthesizing notes into knowledge (use /synthesize)."
 version: 1.0.0
 author: Yuhan Wang
 license: MIT
@@ -50,7 +50,9 @@ Read notes from these sources (skip any that don't exist):
 
 5. **GitHub Trending** — If `04_Knowledge/GitHub/YYYY-MM-DD - GitHub Trending*.md` exists for the scan date, include it.
 
-6. **Catch-up pass (unscanned this week)** — After the date-specific scan above, also glob `04_Knowledge/**/*.md` and `03_Thinking/**/*.md` for files modified this week (same ISO week as the scan date) whose `[[wiki-link]]` does NOT already appear in `06_Content/Backlog.md`. This catches meeting notes, decisions, and essays from earlier in the week that were never scanned — for example, a meeting note from Monday that didn't trigger a scan until Thursday's daily-init. Only include notes that pass the Step 3 evaluation criteria.
+6. **Newsletter emails** — Query Gmail for Substack newsletters received on the scan date using `mcp__claude_ai_Gmail__gmail_search_messages` with query `from:substack.com after:YYYY/MM/DD before:YYYY/MM/(DD+1)`. For each newsletter email, read the full message body with `mcp__claude_ai_Gmail__gmail_read_message`. Focus on the essay content — skip promotional footers, subscription CTAs, and "like/comment/share" boilerplate. Treat each newsletter as a candidate note for Step 3 evaluation. When appending to the backlog, use the newsletter title as the `[[source]]` wiki-link text (no actual vault note exists — this is fine) and set `from:newsletter`.
+
+7. **Catch-up pass (unscanned this week)** — After the date-specific scan above, also glob `04_Knowledge/**/*.md` and `03_Thinking/**/*.md` for files modified this week (same ISO week as the scan date) whose `[[wiki-link]]` does NOT already appear in `06_Content/Backlog.md`. This catches meeting notes, decisions, and essays from earlier in the week that were never scanned — for example, a meeting note from Monday that didn't trigger a scan until Thursday's daily-init. Only include notes that pass the Step 3 evaluation criteria.
 
 Read each candidate note. If a note is very long (>200 lines), read only the first 100 lines and any summary/synthesis sections.
 
